@@ -1,3 +1,5 @@
+//Serch-Component (Leonie Müller)
+
 import { Component, h, Event, State, EventEmitter } from '@stencil/core';
 
 @Component({
