@@ -1,4 +1,4 @@
-//Serch-Component (Leonie Müller)
+//Search-Component (Leonie Müller)
 
 import { Component, h, Event, State, EventEmitter } from '@stencil/core';
 

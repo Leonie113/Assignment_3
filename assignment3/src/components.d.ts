@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface SearchLeonie {
     }
+    interface TextslideLeonie {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -36,9 +38,16 @@ declare global {
         prototype: HTMLSearchLeonieElement;
         new (): HTMLSearchLeonieElement;
     };
+    interface HTMLTextslideLeonieElement extends Components.TextslideLeonie, HTMLStencilElement {
+    }
+    var HTMLTextslideLeonieElement: {
+        prototype: HTMLTextslideLeonieElement;
+        new (): HTMLTextslideLeonieElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "search-leonie": HTMLSearchLeonieElement;
+        "textslide-leonie": HTMLTextslideLeonieElement;
     }
 }
 declare namespace LocalJSX {
@@ -61,9 +70,12 @@ declare namespace LocalJSX {
         "onEvClose"?: (event: CustomEvent<any>) => void;
         "onEvSearch"?: (event: CustomEvent<any>) => void;
     }
+    interface TextslideLeonie {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "search-leonie": SearchLeonie;
+        "textslide-leonie": TextslideLeonie;
     }
 }
 export { LocalJSX as JSX };
@@ -72,6 +84,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
+            "textslide-leonie": LocalJSX.TextslideLeonie & JSXBase.HTMLAttributes<HTMLTextslideLeonieElement>;
         }
     }
 }
