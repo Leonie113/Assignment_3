@@ -1,28 +1,36 @@
-//Serch-Component (Leonie Müller)
+//TextSlide-Component (Leonie Müller)
 
-import { Component, Prop} from '@stencil/core';
+import { Component, h, Event, State, EventEmitter } from '@stencil/core';
 
 @Component({
     tag: 'textslide-leonie',
     styleUrl: 'textSlide-leonie.css'
 })
 
-export class TextSlideLeonie{
+export class textSlideLeonie{
+    @Event() evHover : EventEmitter;
+    @Event() evText : EventEmitter;
+    @State() hover : boolean = true;
+    @State() text : boolean = false;
     
-  @Prop() img1 = "fashion1.png";
-  @Prop() img2 = "fashion2.jpg";
-
-  @Prop() slides: Array<any> = [
-    {
-      imageUrl: `../assets/${this.img1}`
-    },
-    {
-      imageUrl: `../assets/${this.img2}`
-    },
-
-  ]
+    hoverImg() : void {
+        this.hover = !this.hover;
+        this.showText();
+        this.evHover.emit({visible: this.hover}
+    )
+    }
+    showText() : void {
+        this.text = !this.text;
+        this.evText.emit({visible: this.text})
+    }
+    
       render() {
-        return
+        return(  <div class="textSlide-main">
+                    <button class={this.hover ? 'hover': 'hide'} onMouseOver={() => this.hoverImg()}> <img src="/assets/fashion1.png" class="imgHover"/></button>
+                <div id="container-text" class={this.text ? 'text' : 'hide'} >
+                  <h2>Lorem Ipsum</h2>
+                    </div>
+                 </div> );
       }
     }
    

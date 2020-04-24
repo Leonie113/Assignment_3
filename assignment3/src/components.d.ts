@@ -71,6 +71,8 @@ declare namespace LocalJSX {
         "onEvSearch"?: (event: CustomEvent<any>) => void;
     }
     interface TextslideLeonie {
+        "onEvHover"?: (event: CustomEvent<any>) => void;
+        "onEvText"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

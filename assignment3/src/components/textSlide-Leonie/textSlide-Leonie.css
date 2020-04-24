@@ -1,0 +1,36 @@
+
+.textSlide-main{
+    padding-top: 10%;
+
+}
+.imgHover{
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+.hover{
+    width: 25%;
+    height: 25%;
+    display: block;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+}
+.text{
+    height: 50px;
+    display: relative;
+}
+#container-text {
+    background-color: #ccc;
+    opacity: 0.8;
+    width: 100%;
+}
+
+.hide{
+    display: none;
+}
