@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface SearchLeonie {
     }
+    interface TextimgLeonie {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -36,9 +38,16 @@ declare global {
         prototype: HTMLSearchLeonieElement;
         new (): HTMLSearchLeonieElement;
     };
+    interface HTMLTextimgLeonieElement extends Components.TextimgLeonie, HTMLStencilElement {
+    }
+    var HTMLTextimgLeonieElement: {
+        prototype: HTMLTextimgLeonieElement;
+        new (): HTMLTextimgLeonieElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "search-leonie": HTMLSearchLeonieElement;
+        "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
 declare namespace LocalJSX {
@@ -61,9 +70,14 @@ declare namespace LocalJSX {
         "onEvClose"?: (event: CustomEvent<any>) => void;
         "onEvSearch"?: (event: CustomEvent<any>) => void;
     }
+    interface TextimgLeonie {
+        "onEvHover"?: (event: CustomEvent<any>) => void;
+        "onEvText"?: (event: CustomEvent<any>) => void;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "search-leonie": SearchLeonie;
+        "textimg-leonie": TextimgLeonie;
     }
 }
 export { LocalJSX as JSX };
@@ -72,6 +86,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
+            "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
     }
 }
