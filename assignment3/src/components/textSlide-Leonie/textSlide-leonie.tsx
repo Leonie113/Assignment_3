@@ -26,11 +26,21 @@ export class textSlideLeonie{
     
       render() {
         return(  <div class="textSlide-main">
-                    <button class={this.hover ? 'hover': 'hide'} onMouseOver={() => this.hoverImg()}> <img src="/assets/fashion1.png" class="imgHover"/></button>
-                <div id="container-text" class={this.text ? 'text' : 'hide'} >
-                  <h2>Lorem Ipsum</h2>
-                    </div>
-                 </div> );
+          <button class={this.hover ? 'hover': 'hide'} onMouseOver={() => this.hoverImg()}> <img src="/assets/fashion1.png" class="imgHover1"/></button>
+          <div id="container-text" class={this.text ? 'text' : 'hide'} >
+            <img id="showBild" src="/assets/fashion1.png"></img>
+            <div class="text-position">
+              <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</h2>
+            </div>
+          </div>
+          <button class={this.hover ? 'hover': 'hide'} onMouseOver={() => this.hoverImg()}> <img src="/assets/fashion2.jpg" class="imgHover2"/></button>
+          <div id="container-text" class={this.text ? 'text' : 'hide'} >
+            <img src="/assets/fashion2.jpg"></img>
+            <div class="text-position">
+              <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</h2>
+            </div>
+          </div>
+        </div> );
       }
     }
    
