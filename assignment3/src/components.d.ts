@@ -6,12 +6,21 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LoginJessi {
+        "forgotPasswordUrl": string;
+    }
     interface SearchLeonie {
     }
     interface TextimgLeonie {
     }
 }
 declare global {
+    interface HTMLLoginJessiElement extends Components.LoginJessi, HTMLStencilElement {
+    }
+    var HTMLLoginJessiElement: {
+        prototype: HTMLLoginJessiElement;
+        new (): HTMLLoginJessiElement;
+    };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
     var HTMLSearchLeonieElement: {
@@ -25,11 +34,16 @@ declare global {
         new (): HTMLTextimgLeonieElement;
     };
     interface HTMLElementTagNameMap {
+        "login-jessi": HTMLLoginJessiElement;
         "search-leonie": HTMLSearchLeonieElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
 declare namespace LocalJSX {
+    interface LoginJessi {
+        "forgotPasswordUrl"?: string;
+        "onLoginShouldOccur"?: (event: CustomEvent<any>) => void;
+    }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
         "onEvClose"?: (event: CustomEvent<any>) => void;
@@ -40,6 +54,7 @@ declare namespace LocalJSX {
         "onEvText"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
+        "login-jessi": LoginJessi;
         "search-leonie": SearchLeonie;
         "textimg-leonie": TextimgLeonie;
     }
@@ -48,6 +63,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
