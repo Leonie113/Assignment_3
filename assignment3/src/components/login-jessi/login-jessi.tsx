@@ -1,26 +1,24 @@
-import {Component, h, Element, EventEmitter, Event, Listen,} from '@stencil/core';
+import {Component, h, Element, EventEmitter, Event,} from '@stencil/core';
 
 @Component({
     tag: 'login-jessi',
     styleUrl: 'login-jessi.css'
 })
-export class Login {
+export class login {
 
-    @Event() loginShouldOccur: EventEmitter;
+    @Event() loginErfolgt: EventEmitter;
     @Element() host: HTMLElement;
 
     login() {
         let form = this.host.querySelector('form');
         if (form.reportValidity()) {
             let inputs = this.host.querySelectorAll('input');
-            this.loginShouldOccur.emit({ username: inputs[0].value, password: inputs[1].value });
+            this.loginErfolgt.emit({ username: inputs[0].value, password: inputs[1].value });
+            console.log({ username: inputs[0].value, password: inputs[1].value });
         }
     }
 
-    @Listen('event.key.enter')
-    handleEnter() {
-        this.login();
-    }
+ 
 
     render() {
         return (

@@ -49,7 +49,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LoginJessi {
-        "onLoginShouldOccur"?: (event: CustomEvent<any>) => void;
+        "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
@@ -57,7 +57,7 @@ declare namespace LocalJSX {
         "onEvSearch"?: (event: CustomEvent<any>) => void;
     }
     interface SternBewertung {
-        "onStarRate"?: (event: CustomEvent<any>) => void;
+        "onSternWertung"?: (event: CustomEvent<any>) => void;
     }
     interface TextimgLeonie {
         "onEvHover"?: (event: CustomEvent<any>) => void;

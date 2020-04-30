@@ -1,4 +1,4 @@
-import { Component, h, Event, EventEmitter, Listen} from '@stencil/core';
+import { Component, h, Event, EventEmitter, Listen, State} from '@stencil/core';
 
 @Component({
   tag: 'stern-bewertung',
@@ -7,13 +7,16 @@ import { Component, h, Event, EventEmitter, Listen} from '@stencil/core';
 })
 
   export class sternBewertung {
-    
-    @Event() starRate: EventEmitter;
+
+    @State() value:any;
+
+    @Event() sternWertung: EventEmitter;
+
     @Listen('input')
         onInput(event) {
-            this.starRate.emit({
+            this.sternWertung.emit({
                 event,
-                value: event.target.value
+               value: event.target.value 
             });
             alert("Thanks for rating us. You gave us " + event.target.value + " stars")
         }
@@ -22,19 +25,19 @@ import { Component, h, Event, EventEmitter, Listen} from '@stencil/core';
       render() {
           return(
             <div class="star-all">
-            <h1 class="please-rate">Please Rate Us</h1>
-            <div class="star-rating">
-                <input type="radio" id="5-stars" name="rating" value="5" />
-                <label htmlFor ="5-stars" class="star">&#9733;</label>
-                <input type="radio" id="4-stars" name="rating" value="4" />
-                <label htmlFor ="4-stars" class="star">&#9733;</label>
-                <input type="radio" id="3-stars" name="rating" value="3" />
-                <label htmlFor ="3-stars" class="star">&#9733;</label>
-                <input type="radio" id="2-stars" name="rating" value="2" />
-                <label htmlFor ="2-stars" class="star">&#9733;</label>
-                <input type="radio" id="1-star" name="rating" value="1" />
-                <label htmlFor ="1-star" class="star">&#9733;</label>
-            </div>
+              <h1 class="please-rate">Please Rate Us</h1>
+              <div class="star-rating">
+                  <input type="radio" id="5-stars" name="rating" value="5" />
+                  <label htmlFor ="5-stars" class="star">&#9733;</label>
+                  <input type="radio" id="4-stars" name="rating" value="4" />
+                  <label htmlFor ="4-stars" class="star">&#9733;</label>
+                  <input type="radio" id="3-stars" name="rating" value="3" />
+                  <label htmlFor ="3-stars" class="star">&#9733;</label>
+                  <input type="radio" id="2-stars" name="rating" value="2" />
+                  <label htmlFor ="2-stars" class="star">&#9733;</label>
+                  <input type="radio" id="1-star" name="rating" value="1" />
+                  <label htmlFor ="1-star" class="star">&#9733;</label>
+              </div>
             </div>
 
           );
