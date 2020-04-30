@@ -10,6 +10,8 @@ export namespace Components {
     }
     interface SearchLeonie {
     }
+    interface SternBewertung {
+    }
     interface TextimgLeonie {
     }
 }
@@ -26,6 +28,12 @@ declare global {
         prototype: HTMLSearchLeonieElement;
         new (): HTMLSearchLeonieElement;
     };
+    interface HTMLSternBewertungElement extends Components.SternBewertung, HTMLStencilElement {
+    }
+    var HTMLSternBewertungElement: {
+        prototype: HTMLSternBewertungElement;
+        new (): HTMLSternBewertungElement;
+    };
     interface HTMLTextimgLeonieElement extends Components.TextimgLeonie, HTMLStencilElement {
     }
     var HTMLTextimgLeonieElement: {
@@ -35,6 +43,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "login-jessi": HTMLLoginJessiElement;
         "search-leonie": HTMLSearchLeonieElement;
+        "stern-bewertung": HTMLSternBewertungElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
@@ -47,6 +56,9 @@ declare namespace LocalJSX {
         "onEvClose"?: (event: CustomEvent<any>) => void;
         "onEvSearch"?: (event: CustomEvent<any>) => void;
     }
+    interface SternBewertung {
+        "onStarRate"?: (event: CustomEvent<any>) => void;
+    }
     interface TextimgLeonie {
         "onEvHover"?: (event: CustomEvent<any>) => void;
         "onEvText"?: (event: CustomEvent<any>) => void;
@@ -54,6 +66,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "login-jessi": LoginJessi;
         "search-leonie": SearchLeonie;
+        "stern-bewertung": SternBewertung;
         "textimg-leonie": TextimgLeonie;
     }
 }
@@ -63,6 +76,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
+            "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
     }

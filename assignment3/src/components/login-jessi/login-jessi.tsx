@@ -26,13 +26,13 @@ export class Login {
         return (
             <form class="login-form">
                 <div class="login-container">
-                    <div class="field-wrap">
-                        <label class="login-username">Username <span class="req">*</span>:</label>
-                        <input class="username" name="username" required />
+                    <div class="login-field">
+                        <label class="login-label">Username <span class="req">*</span>:</label>
+                        <input class="login-input" name="username" required />
                     </div>
-                    <div class="field-wrap">
-                        <label class="login-password">Password <span class="req">*</span>:</label>
-                        <input class="password" type="password" name="password" required />
+                    <div class="login-field">
+                        <label class="login-label">Password <span class="req">*</span>:</label>
+                        <input class="login-input" type="password" name="password" required />
                     </div>
                     <button type="button" class="login-button" onClick={() => { this.login(); }}>Login</button>
                 </div>
