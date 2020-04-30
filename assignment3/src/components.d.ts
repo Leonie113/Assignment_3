@@ -7,7 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LoginJessi {
-        "forgotPasswordUrl": string;
     }
     interface SearchLeonie {
     }
@@ -41,7 +40,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LoginJessi {
-        "forgotPasswordUrl"?: string;
         "onLoginShouldOccur"?: (event: CustomEvent<any>) => void;
     }
     interface SearchLeonie {
