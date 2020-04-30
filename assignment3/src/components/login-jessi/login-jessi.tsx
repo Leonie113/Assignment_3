@@ -34,7 +34,7 @@ export class Login {
                         <label class="login-password">Password <span class="req">*</span>:</label>
                         <input class="password" type="password" name="password" required />
                     </div>
-                    <button type="button" onClick={() => { this.login(); }}>Login</button>
+                    <button type="button" class="login-button" onClick={() => { this.login(); }}>Login</button>
                 </div>
             </form>
         );

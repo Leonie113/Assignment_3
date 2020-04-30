@@ -1,17 +1,28 @@
 
-  form {
+  .login-form {
     width: 300px;
   }
 
-label {
+  .login-username {
     position:absolute;
     transform:translateY(6px);
     left:13px;
-
     transition:all 0.25s ease;
     pointer-events: none;
-    font-size:22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
 }
+
+  .login-password {
+    position:absolute;
+    transform:translateY(6px);
+    left:13px;
+    transition:all 0.25s ease;
+    pointer-events: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+  }
+
 
   
     .req {
@@ -23,23 +34,26 @@ label {
     color: #ffffff;
   }
 
-  input {
+  /* input {
     display:block;
     border: 1px solid lightgray;
     border-radius:0;
     margin:0;
     padding:0;
-  }
+  } */
+
     :focus {
       outline:0;
       border-color: rgb(27, 100, 9);
     }
 
+
+
   .field-wrap {
     position:relative;
      }
 
-  button {
+  .login-button {
     border-radius: 5px;
     text-transform: uppercase;
     background: #94d392;
@@ -50,19 +64,11 @@ label {
     font-size: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
-    margin-left: 31px;
+    margin-left: 13.5%;
   }
     
   
-  .login-password {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.8em;
-  }
-
-  .login-username {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.8em;
-  }
+  
 
   .password {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
