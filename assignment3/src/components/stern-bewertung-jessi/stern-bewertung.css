@@ -36,3 +36,9 @@
   .star-rating label:hover ~ label {
     color:#fc0;
   }
+
+  @media only screen and (max-width: 573px) {
+    .star-all {
+        margin-left: 50%;
+    }
+  }

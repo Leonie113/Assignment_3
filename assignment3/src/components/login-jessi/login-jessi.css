@@ -1,14 +1,18 @@
 
-  .login-form {
+  /* .login-form {
+    width: 300px;
+    margin-left: 90%;
+  } */
+
+  .login-container {
     width: 300px;
     margin-left: 90%;
   }
 
-
   .login-label {
     position:absolute;
     transform:translateY(6px);
-    left:13px;
+    margin-left:5%;
     transition:all 0.25s ease;
     pointer-events: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +34,7 @@
       border-color: rgb(27, 100, 9);
     }
 
-  .login-field {
+  .login-feld {
     position:relative;
      }
 
@@ -59,4 +63,17 @@
     padding: 20px 15px 0px;
   }
 
+  @media only screen and (max-width: 1200px) {
+    .login-container {
+        margin-left: 78%;
+    }
+  }
+
+  @media only screen and (max-width: 573px) {
+    .login-container {
+        margin-left: 76%;
+    }
+  }
+
+  
 

@@ -24,11 +24,11 @@ export class login {
         return (
             <form class="login-form">
                 <div class="login-container">
-                    <div class="login-field">
+                    <div class="login-feld">
                         <label class="login-label">Username <span class="req">*</span>:</label>
                         <input class="login-input" name="username" required />
                     </div>
-                    <div class="login-field">
+                    <div class="login-feld">
                         <label class="login-label">Password <span class="req">*</span>:</label>
                         <input class="login-input" type="password" name="password" required />
                     </div>
