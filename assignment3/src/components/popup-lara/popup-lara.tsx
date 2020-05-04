@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop, } from '@stencil/core';
 
 @Component({
   tag: 'popup-lara',
@@ -7,13 +7,23 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class PopupLara {
 
+ @Prop() visible: boolean;
+
+ getVisiblity():string{
+  return this.visible ? "invisible" : "";
+ }
+
   render() {
     return (
       <Host>
-        <div>
+        <div class={this.getVisiblity()}>
           <button> &times; </button>
-          <slot></slot>
-          <input></input>
+          <h1>Herzlich Willkommen</h1> 
+          <slot>
+          
+          </slot>
+          <input type="email" placeholder="Gib deine Email ein"></input>
+          <button class="button-registieren">ANMELDEN</button>
         </div>
       </Host>
     );
