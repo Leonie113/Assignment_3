@@ -3,7 +3,9 @@
 }
 
 div {
-  z-index:3344330000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:	rgb(136,136,136);
+  z-index:100;
 	width: 415px;
 	height: auto;
   margin-left: 35%;
@@ -16,14 +18,35 @@ div {
 }
 
 
-button{
+.buttonx{
+  z-index:110;
   float: right;
+  font-size: 50px;
+  color: rgb(255, 248, 248);
+  position: absolute;
+  margin-top: -10px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  right: 20px;
 }
 
+span{
+  padding-right: 40px;
+}
+
+h1{
+  font-weight: lighter;
+}
 input{
+  color:	rgb(136,136,136);
   margin-top: 40px;
   height: 20px;
   width: 70%;
+  font-size: 12px;
 }
 
 .invisible {
@@ -37,5 +60,15 @@ input{
   padding-bottom: 10px;
   width: 40%;
   text-align: center;
+  color: rgb(127, 200, 196);
+  font-size: 20px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  font-weight: bold;
 }
 
+img{
+  z-index: 101;
+  width: 415px;
+  position: relative;
+}

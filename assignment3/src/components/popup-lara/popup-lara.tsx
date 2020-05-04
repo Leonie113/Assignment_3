@@ -17,11 +17,12 @@ export class PopupLara {
     return (
       <Host>
         <div class={this.getVisiblity()}>
-          <button> &times; </button>
+          <img id="" src="/assets/newsletter.png" ></img>
+          <button class="buttonx"> &times; </button>
           <h1>Herzlich Willkommen</h1> 
-          <slot>
-          
-          </slot>
+          <span>
+            <slot></slot>
+          </span>
           <input type="email" placeholder="Gib deine Email ein"></input>
           <button class="button-registieren">ANMELDEN</button>
         </div>
