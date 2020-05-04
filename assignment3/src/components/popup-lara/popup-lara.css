@@ -13,9 +13,10 @@ div {
 	box-shadow: 10px 10px 44px 0px rgba(0,0,0,0.75);
   border-radius: 5px;
   position: fixed;
-	padding: 1%;
-	text-align: center;
+  text-align: center;
+  padding: 1%;
 }
+
 
 
 .buttonx{
@@ -35,15 +36,16 @@ div {
 }
 
 span{
-  padding-right: 40px;
+ width: 80%;
 }
 
 h1{
   font-weight: lighter;
+
 }
 input{
   color:	rgb(136,136,136);
-  margin-top: 40px;
+  margin-top: 30px;
   height: 20px;
   width: 70%;
   font-size: 12px;
@@ -54,6 +56,7 @@ input{
 }
 
 .button-registieren {
+  margin-top: 30px;
   float: none;
   margin: 20px;
   padding-top: 10px;
@@ -67,7 +70,8 @@ input{
   font-weight: bold;
 }
 
-img{
+
+div img{
   z-index: 101;
   width: 415px;
   position: relative;

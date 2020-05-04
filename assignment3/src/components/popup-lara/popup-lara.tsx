@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, } from '@stencil/core';
+import { Component, Host, h, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'popup-lara',
@@ -12,13 +12,21 @@ export class PopupLara {
  getVisiblity():string{
   return this.visible ? "invisible" : "";
  }
+ 
+ @Element() el: HTMLDivElement | any = document.getElementsByTagName("div");
+ invisible(): void {
+  this.el!.style.display= "hidden";
+  console.log("hallo")
+}
+
+
 
   render() {
     return (
       <Host>
         <div class={this.getVisiblity()}>
           <img id="" src="/assets/newsletter.png" ></img>
-          <button class="buttonx"> &times; </button>
+          <button class="buttonx" onClick={() => this.invisible()}> &times; </button>
           <h1>Herzlich Willkommen</h1> 
           <span>
             <slot></slot>
