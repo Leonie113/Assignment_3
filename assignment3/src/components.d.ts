@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LoginJessi {
     }
-    interface MediaGallery {
+    interface PopupLara {
     }
     interface SearchLeonie {
     }
@@ -24,11 +24,11 @@ declare global {
         prototype: HTMLLoginJessiElement;
         new (): HTMLLoginJessiElement;
     };
-    interface HTMLMediaGalleryElement extends Components.MediaGallery, HTMLStencilElement {
+    interface HTMLPopupLaraElement extends Components.PopupLara, HTMLStencilElement {
     }
-    var HTMLMediaGalleryElement: {
-        prototype: HTMLMediaGalleryElement;
-        new (): HTMLMediaGalleryElement;
+    var HTMLPopupLaraElement: {
+        prototype: HTMLPopupLaraElement;
+        new (): HTMLPopupLaraElement;
     };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
@@ -50,7 +50,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "login-jessi": HTMLLoginJessiElement;
-        "media-gallery": HTMLMediaGalleryElement;
+        "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
         "stern-bewertung": HTMLSternBewertungElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
@@ -60,7 +60,7 @@ declare namespace LocalJSX {
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
     }
-    interface MediaGallery {
+    interface PopupLara {
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
@@ -76,7 +76,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "login-jessi": LoginJessi;
-        "media-gallery": MediaGallery;
+        "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
         "stern-bewertung": SternBewertung;
         "textimg-leonie": TextimgLeonie;
@@ -87,7 +87,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
-            "media-gallery": LocalJSX.MediaGallery & JSXBase.HTMLAttributes<HTMLMediaGalleryElement>;
+            "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
