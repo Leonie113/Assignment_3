@@ -14,7 +14,6 @@ div {
   border-radius: 5px;
   position: fixed;
   text-align: center;
-  padding: 1%;
 }
 
 
@@ -25,14 +24,14 @@ div {
   font-size: 50px;
   color: rgb(255, 248, 248);
   position: absolute;
-  margin-top: -10px;
+  margin-top: -8px;
   background-color: Transparent;
   background-repeat:no-repeat;
   border: none;
   cursor:pointer;
   overflow: hidden;
   outline:none;
-  right: 20px;
+  right: 5px;
 }
 
 span{
@@ -43,11 +42,20 @@ h1{
   font-weight: lighter;
 
 }
+p {
+  width: 65%;
+  margin-top: -2%;
+  font-size: 18px;
+  display: inline-block
+}
+
 input{
+  border: 2px solid rgb(240, 240, 240);
   color:	rgb(136,136,136);
-  margin-top: 30px;
+  padding-left: 5px;
+  margin-top: 10px;
   height: 20px;
-  width: 70%;
+  width: 65%;
   font-size: 12px;
 }
 
@@ -58,7 +66,7 @@ input{
 .button-registieren {
   margin-top: 30px;
   float: none;
-  margin: 20px;
+  margin: 18px;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 40%;
@@ -75,4 +83,9 @@ div img{
   z-index: 101;
   width: 415px;
   position: relative;
+}
+
+.errorp{
+  color: rgb(127, 200, 196);
+  font-size: 12px;
 }

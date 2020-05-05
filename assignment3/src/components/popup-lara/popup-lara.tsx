@@ -8,18 +8,30 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class PopupLara {
 
  
- @Prop () inputwert: string;
+  @Prop () inputwert: string;
 
 
- divElement!: HTMLDivElement;
+  divElement!: HTMLDivElement;
+  pElement!: HTMLParagraphElement;
 
-invisible(el: HTMLElement): void {
-  el.style.display="none"
-}
+  invisible(el: HTMLElement): void {
+    el.style.display="none"
+  }
 
-inputChanged(event){
-  console.log('input changed: ', event.target.value);
-}
+  inputChanged(event){
+    console.log('input changed: ', event.target.value);
+    this.inputwert = event.target.value;
+    return this.inputwert;
+  }
+
+  handleClickAnmelden(){
+    if (this.inputwert === undefined || this.inputwert === ""){
+      this.pElement.classList.add("errorp");
+      this.pElement.innerHTML = "Du hast vergessen deine Email einzugeben";
+    } else{
+      this.invisible(this.divElement);
+    }
+  }
 
 
   render() {
@@ -30,10 +42,13 @@ inputChanged(event){
           <button class="buttonx" onClick={() => this.invisible(this.divElement)}> &times; </button>
           <h1>Herzlich Willkommen</h1> 
           <span>
-            <slot></slot>
+            <p>
+              <slot></slot>
+            </p>
           </span>
           <input name="username" placeholder="Gib deine Email ein" required onChange={(event: UIEvent) => this.inputChanged(event)}></input>
-          <button class="button-registieren">ANMELDEN</button>
+          <p ref={(el) => this.pElement = el as HTMLParagraphElement}></p>
+          <button class="button-registieren" onClick={() => this.handleClickAnmelden()}>ANMELDEN</button>
         </div>
       </Host>
     );
