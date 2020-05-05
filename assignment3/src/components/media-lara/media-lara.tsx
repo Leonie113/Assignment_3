@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, getAssetPath, Prop } from '@stencil/core';
 
 @Component({
   tag: 'media-lara',
@@ -7,10 +7,16 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class MediaLara {
 
+  // @Prop() image : Array<String> = ["cloths-jeans.jpg", "cloths-foto.jpeg", "fashion-cloths.jpg"];
+  @Prop() image : string = "cloths-jeans.jpg";
+  
+
+
   render() {
     return (
       <div>
-        <img src="img1.jpg"></img>
+        <img src={getAssetPath(`./assets/${this.image}`)} />
+        <button></button>
       </div>
     );
   }
