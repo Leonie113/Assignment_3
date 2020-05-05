@@ -6,12 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface NavigationLisa {
+    }
     interface SearchLeonie {
     }
     interface TextimgLeonie {
     }
 }
 declare global {
+    interface HTMLNavigationLisaElement extends Components.NavigationLisa, HTMLStencilElement {
+    }
+    var HTMLNavigationLisaElement: {
+        prototype: HTMLNavigationLisaElement;
+        new (): HTMLNavigationLisaElement;
+    };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
     var HTMLSearchLeonieElement: {
@@ -25,11 +33,14 @@ declare global {
         new (): HTMLTextimgLeonieElement;
     };
     interface HTMLElementTagNameMap {
+        "navigation-lisa": HTMLNavigationLisaElement;
         "search-leonie": HTMLSearchLeonieElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
 declare namespace LocalJSX {
+    interface NavigationLisa {
+    }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
         "onEvClose"?: (event: CustomEvent<any>) => void;
@@ -40,6 +51,7 @@ declare namespace LocalJSX {
         "onEvText"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
+        "navigation-lisa": NavigationLisa;
         "search-leonie": SearchLeonie;
         "textimg-leonie": TextimgLeonie;
     }
@@ -48,6 +60,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "navigation-lisa": LocalJSX.NavigationLisa & JSXBase.HTMLAttributes<HTMLNavigationLisaElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
