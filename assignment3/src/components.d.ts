@@ -9,7 +9,7 @@ export namespace Components {
     interface LoginJessi {
     }
     interface MediaLara {
-        "image": string;
+        "image": Array<String>;
     }
     interface SearchLeonie {
     }
@@ -62,7 +62,7 @@ declare namespace LocalJSX {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
     }
     interface MediaLara {
-        "image"?: string;
+        "image"?: Array<String>;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
