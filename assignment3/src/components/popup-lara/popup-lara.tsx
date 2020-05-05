@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element } from '@stencil/core';
+import { Component, Host, h, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'popup-lara',
@@ -6,22 +6,29 @@ import { Component, Host, h, Prop, Element } from '@stencil/core';
   shadow: true,
 })
 export class PopupLara {
+
  
- /** @Element() el: HTMLDivElement | any;
- invisible(): void {
-  this.el = document.getElementsByTagName("div");
-  this.el!.remove();
-  console.log("hallo")
-}**/ 
+ 
+ @Element() divElement: HTMLDivElement | any;
 
+ setElement(){
+    this.divElement = document.getElementsByTagName("div");
+}
 
+getElement(){
+  return this.divElement;
+}
+
+invisible(el: HTMLElement): void {
+  el.style.display="none"
+}
 
   render() {
     return (
       <Host>
         <div>
           <img id="" src="/assets/newsletter.png" ></img>
-          <button class="buttonx" onClick={() => this.invisible()}> &times; </button>
+          <button class="buttonx" onClick={() => this.invisible(this.getElement())}> &times; </button>
           <h1>Herzlich Willkommen</h1> 
           <span>
             <slot></slot>
