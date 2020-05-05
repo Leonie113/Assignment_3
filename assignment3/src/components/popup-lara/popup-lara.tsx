@@ -6,25 +6,20 @@ import { Component, Host, h, Prop, Element } from '@stencil/core';
   shadow: true,
 })
 export class PopupLara {
-
- @Prop() visible: boolean;
-
- getVisiblity():string{
-  return this.visible ? "invisible" : "";
- }
  
- @Element() el: HTMLDivElement | any = document.getElementsByTagName("div");
+ /** @Element() el: HTMLDivElement | any;
  invisible(): void {
-  this.el!.style.display= "hidden";
+  this.el = document.getElementsByTagName("div");
+  this.el!.remove();
   console.log("hallo")
-}
+}**/ 
 
 
 
   render() {
     return (
       <Host>
-        <div class={this.getVisiblity()}>
+        <div>
           <img id="" src="/assets/newsletter.png" ></img>
           <button class="buttonx" onClick={() => this.invisible()}> &times; </button>
           <h1>Herzlich Willkommen</h1> 
