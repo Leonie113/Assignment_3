@@ -1,11 +1,11 @@
-import { Component, ComponentInterface, h, Prop, getAssetPath } from '@stencil/core';
+import { Component, h, Prop, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'mediagallery-lara',
   styleUrl: 'mediagallery-lara.css',
   shadow: true,
 })
-export class MediagalleryLara implements ComponentInterface {
+export class MediagalleryLara {
 
   @Prop() image : Array<String> = ["cloths-jeans.jpg", "bags-store.jpg", "fashion-cloths.jpg"];
   @Prop() slideIndex: number = 1;

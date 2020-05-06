@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'popup-lara',
@@ -6,7 +6,7 @@ import { Component, ComponentInterface, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 
-export class PopupLara implements ComponentInterface{
+export class PopupLara {
 
  
   @Prop () inputwert: string;
