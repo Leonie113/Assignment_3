@@ -18,7 +18,7 @@ export class MediagalleryLara {
       if (n > this.image.length-1){ 
           this.imageNumber = 0;
       }
-      if (n < 1){
+      if (n < 0){
           this.imageNumber = this.image.length-1; 
       }
   }
