@@ -22,7 +22,6 @@ export class PopupLara {
   inputChanged(event){
     console.log('input changed: ', event.target.value);
     this.inputwert = event.target.value;
-    return this.inputwert;
   }
 
   handleClickAnmelden(){
