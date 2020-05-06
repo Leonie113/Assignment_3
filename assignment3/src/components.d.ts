@@ -8,7 +8,15 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LoginJessi {
     }
+    interface MediaLara {
+        "image": Array<String>;
+        "imageNumber": number;
+        "slideIndex": number;
+    }
     interface MediagalleryLara {
+        "image": Array<String>;
+        "imageNumber": number;
+        "slideIndex": number;
     }
     interface PopupLara {
         "inputwert": string;
@@ -26,6 +34,12 @@ declare global {
     var HTMLLoginJessiElement: {
         prototype: HTMLLoginJessiElement;
         new (): HTMLLoginJessiElement;
+    };
+    interface HTMLMediaLaraElement extends Components.MediaLara, HTMLStencilElement {
+    }
+    var HTMLMediaLaraElement: {
+        prototype: HTMLMediaLaraElement;
+        new (): HTMLMediaLaraElement;
     };
     interface HTMLMediagalleryLaraElement extends Components.MediagalleryLara, HTMLStencilElement {
     }
@@ -59,6 +73,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "login-jessi": HTMLLoginJessiElement;
+        "media-lara": HTMLMediaLaraElement;
         "mediagallery-lara": HTMLMediagalleryLaraElement;
         "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
@@ -70,7 +85,15 @@ declare namespace LocalJSX {
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
     }
+    interface MediaLara {
+        "image"?: Array<String>;
+        "imageNumber"?: number;
+        "slideIndex"?: number;
+    }
     interface MediagalleryLara {
+        "image"?: Array<String>;
+        "imageNumber"?: number;
+        "slideIndex"?: number;
     }
     interface PopupLara {
         "inputwert"?: string;
@@ -89,6 +112,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "login-jessi": LoginJessi;
+        "media-lara": MediaLara;
         "mediagallery-lara": MediagalleryLara;
         "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
@@ -101,6 +125,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
+            "media-lara": LocalJSX.MediaLara & JSXBase.HTMLAttributes<HTMLMediaLaraElement>;
             "mediagallery-lara": LocalJSX.MediagalleryLara & JSXBase.HTMLAttributes<HTMLMediagalleryLaraElement>;
             "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
