@@ -11,9 +11,8 @@ export class MediagalleryLara {
   @Prop() slideIndex: number = 1;
   @Prop() imageNumber : number = 0;
 
-  plusSlide(n): void{
+  plusSlide(n:number): void{
     this.slides(this.slideIndex += n);
-    return n;
   }
 
   slides(n:number): number{
