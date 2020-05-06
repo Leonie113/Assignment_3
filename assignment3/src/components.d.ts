@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LoginJessi {
     }
+    interface PopupLara {
+    }
     interface SearchLeonie {
     }
     interface SternBewertung {
@@ -21,6 +23,12 @@ declare global {
     var HTMLLoginJessiElement: {
         prototype: HTMLLoginJessiElement;
         new (): HTMLLoginJessiElement;
+    };
+    interface HTMLPopupLaraElement extends Components.PopupLara, HTMLStencilElement {
+    }
+    var HTMLPopupLaraElement: {
+        prototype: HTMLPopupLaraElement;
+        new (): HTMLPopupLaraElement;
     };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
@@ -42,6 +50,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "login-jessi": HTMLLoginJessiElement;
+        "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
         "stern-bewertung": HTMLSternBewertungElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
@@ -50,6 +59,8 @@ declare global {
 declare namespace LocalJSX {
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
+    }
+    interface PopupLara {
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
@@ -65,6 +76,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "login-jessi": LoginJessi;
+        "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
         "stern-bewertung": SternBewertung;
         "textimg-leonie": TextimgLeonie;
@@ -75,6 +87,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
+            "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
