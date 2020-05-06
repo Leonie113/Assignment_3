@@ -8,22 +8,19 @@ import { Component, h, Prop, getAssetPath } from '@stencil/core';
 export class MediagalleryLara {
 
   @Prop() image : Array<String> = ["cloths-jeans.jpg", "bags-store.jpg", "fashion-cloths.jpg"];
-  @Prop() slideIndex: number = 1;
   @Prop() imageNumber : number = 0;
 
   plusSlide(n:number): void{
-    this.slides(this.slideIndex += n);
+    this.slides(this.imageNumber += n);
   }
 
   slides(n:number)/*: number*/{
-      if (n > this.image.length){ 
-          this.slideIndex = 1;
+      if (n > this.image.length-1){ 
+          this.imageNumber = 0;
       }
       if (n < 1){
-          this.slideIndex = this.image.length; 
+          this.imageNumber = this.image.length-1; 
       }
-      this.imageNumber = this.slideIndex-1;
-      //return this.imageNumber;
   }
 
 
@@ -37,5 +34,4 @@ export class MediagalleryLara {
       
     );
   }
-
 }

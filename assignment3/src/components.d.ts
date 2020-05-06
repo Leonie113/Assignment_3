@@ -11,7 +11,6 @@ export namespace Components {
     interface MediagalleryLara {
         "image": Array<String>;
         "imageNumber": number;
-        "slideIndex": number;
     }
     interface PopupLara {
         "inputwert": string;
@@ -76,7 +75,6 @@ declare namespace LocalJSX {
     interface MediagalleryLara {
         "image"?: Array<String>;
         "imageNumber"?: number;
-        "slideIndex"?: number;
     }
     interface PopupLara {
         "inputwert"?: string;
