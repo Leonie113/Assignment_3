@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LoginJessi {
     }
+    interface MediagalleryLara {
+    }
     interface PopupLara {
         "inputwert": string;
     }
@@ -24,6 +26,12 @@ declare global {
     var HTMLLoginJessiElement: {
         prototype: HTMLLoginJessiElement;
         new (): HTMLLoginJessiElement;
+    };
+    interface HTMLMediagalleryLaraElement extends Components.MediagalleryLara, HTMLStencilElement {
+    }
+    var HTMLMediagalleryLaraElement: {
+        prototype: HTMLMediagalleryLaraElement;
+        new (): HTMLMediagalleryLaraElement;
     };
     interface HTMLPopupLaraElement extends Components.PopupLara, HTMLStencilElement {
     }
@@ -51,6 +59,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "login-jessi": HTMLLoginJessiElement;
+        "mediagallery-lara": HTMLMediagalleryLaraElement;
         "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
         "stern-bewertung": HTMLSternBewertungElement;
@@ -60,6 +69,8 @@ declare global {
 declare namespace LocalJSX {
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
+    }
+    interface MediagalleryLara {
     }
     interface PopupLara {
         "inputwert"?: string;
@@ -78,6 +89,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "login-jessi": LoginJessi;
+        "mediagallery-lara": MediagalleryLara;
         "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
         "stern-bewertung": SternBewertung;
@@ -89,6 +101,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
+            "mediagallery-lara": LocalJSX.MediagalleryLara & JSXBase.HTMLAttributes<HTMLMediagalleryLaraElement>;
             "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
