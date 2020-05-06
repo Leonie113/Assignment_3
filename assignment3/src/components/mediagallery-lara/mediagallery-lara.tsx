@@ -15,7 +15,7 @@ export class MediagalleryLara {
     this.slides(this.slideIndex += n);
   }
 
-  slides(n:number): number{
+  slides(n:number)/*: number*/{
       if (n > this.image.length){ 
           this.slideIndex = 1;
       }
@@ -23,7 +23,7 @@ export class MediagalleryLara {
           this.slideIndex = this.image.length; 
       }
       this.imageNumber = this.slideIndex-1;
-      return this.imageNumber;
+      //return this.imageNumber;
   }
 
 
