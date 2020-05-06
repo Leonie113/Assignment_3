@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, Prop, getAssetPath } from '@stencil/core';
+import { Component, ComponentInterface, h, Prop, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'mediagallery-lara',
