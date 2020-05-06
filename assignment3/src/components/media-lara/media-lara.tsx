@@ -31,8 +31,8 @@ export class MediaLara {
   render() {
     return (
         <div class="container">
-          <button onClick={ () => this.plusSlide(-1)} id="left">&#8249;</button>
           <button onClick={ () => this.plusSlide(+1)} id="right" >&#8250;</button>
+          <button onClick={ () => this.plusSlide(-1)} id="left">&#8249;</button>
           <img src={getAssetPath(`/assets/${this.image[this.imageNumber]}`)}></img>
         </div>
       
