@@ -41,11 +41,9 @@ export class PopupLara {
           <img id="" src="/assets/newsletter.png" ></img>
           <button class="buttonx" onClick={() => this.invisible(this.divElement)}> &times; </button>
           <h1>Herzlich Willkommen</h1> 
-          <span>
             <p>
               <slot></slot>
             </p>
-          </span>
           <input name="username" placeholder="Gib deine Email ein" required onChange={(event: UIEvent) => this.inputChanged(event)}></input>
           <p ref={(el) => this.pElement = el as HTMLParagraphElement}></p>
           <button class="button-registieren" onClick={() => this.handleClickAnmelden()}>ANMELDEN</button>
