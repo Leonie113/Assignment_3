@@ -17,14 +17,12 @@ export class MediaLara {
   }
 
   slides(n:number): number{
-        // console.log(slides.length); --> 3 
-      if (n > this.image.length){ // wenn es nach dem Durchlauf großer als 3 ist, wird es wieder auf 1 gesetzt
+      if (n > this.image.length){ 
           this.slideIndex = 1;
       }
       if (n < 1){
-          this.slideIndex = this.image.length; // man könnte hier auch einfach 3 schreiben (slides.length ist nur die schönere Variante), also wenn es kleiner ist als 1, dann beginne wieder von hinten
+          this.slideIndex = this.image.length; 
       }
-       //zeigen (-1 muss man schreiben da Arrays mit null anfangen, also 1-1=0)
       this.imageNumber = this.slideIndex-1;
       return this.imageNumber;
   }
