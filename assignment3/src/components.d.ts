@@ -10,6 +10,8 @@ export namespace Components {
     }
     interface MediaLara {
         "image": Array<String>;
+        "imageNumber": number;
+        "slideIndex": number;
     }
     interface SearchLeonie {
     }
@@ -63,6 +65,8 @@ declare namespace LocalJSX {
     }
     interface MediaLara {
         "image"?: Array<String>;
+        "imageNumber"?: number;
+        "slideIndex"?: number;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
