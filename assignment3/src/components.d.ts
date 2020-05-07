@@ -12,6 +12,8 @@ export namespace Components {
         "kind": "info" | "succes" | "error";
         "text": string;
     }
+    interface LoginJessi {
+    }
     interface MediagalleryLara {
         "image": Array<String>;
         "imageNumber": number;
@@ -20,6 +22,8 @@ export namespace Components {
         "inputwert": string;
     }
     interface SearchLeonie {
+    }
+    interface SternBewertung {
     }
     interface TapLisa {
         "active": boolean;
@@ -38,6 +42,12 @@ declare global {
         prototype: HTMLAlertLisaElement;
         new (): HTMLAlertLisaElement;
     };
+    interface HTMLLoginJessiElement extends Components.LoginJessi, HTMLStencilElement {
+    }
+    var HTMLLoginJessiElement: {
+        prototype: HTMLLoginJessiElement;
+        new (): HTMLLoginJessiElement;
+    };
     interface HTMLMediagalleryLaraElement extends Components.MediagalleryLara, HTMLStencilElement {
     }
     var HTMLMediagalleryLaraElement: {
@@ -55,6 +65,12 @@ declare global {
     var HTMLSearchLeonieElement: {
         prototype: HTMLSearchLeonieElement;
         new (): HTMLSearchLeonieElement;
+    };
+    interface HTMLSternBewertungElement extends Components.SternBewertung, HTMLStencilElement {
+    }
+    var HTMLSternBewertungElement: {
+        prototype: HTMLSternBewertungElement;
+        new (): HTMLSternBewertungElement;
     };
     interface HTMLTapLisaElement extends Components.TapLisa, HTMLStencilElement {
     }
@@ -76,9 +92,11 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "alert-lisa": HTMLAlertLisaElement;
+        "login-jessi": HTMLLoginJessiElement;
         "mediagallery-lara": HTMLMediagalleryLaraElement;
         "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
+        "stern-bewertung": HTMLSternBewertungElement;
         "tap-lisa": HTMLTapLisaElement;
         "taps-lisa": HTMLTapsLisaElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
@@ -89,6 +107,9 @@ declare namespace LocalJSX {
         "kind"?: "info" | "succes" | "error";
         "onAcknowlegde"?: (event: CustomEvent<AcknowledgeEvent>) => void;
         "text"?: string;
+    }
+    interface LoginJessi {
+        "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
     }
     interface MediagalleryLara {
         "image"?: Array<String>;
@@ -101,6 +122,9 @@ declare namespace LocalJSX {
         "onEvClick"?: (event: CustomEvent<any>) => void;
         "onEvClose"?: (event: CustomEvent<any>) => void;
         "onEvSearch"?: (event: CustomEvent<any>) => void;
+    }
+    interface SternBewertung {
+        "onSternWertung"?: (event: CustomEvent<any>) => void;
     }
     interface TapLisa {
         "active"?: boolean;
@@ -116,9 +140,11 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "alert-lisa": AlertLisa;
+        "login-jessi": LoginJessi;
         "mediagallery-lara": MediagalleryLara;
         "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
+        "stern-bewertung": SternBewertung;
         "tap-lisa": TapLisa;
         "taps-lisa": TapsLisa;
         "textimg-leonie": TextimgLeonie;
@@ -129,9 +155,11 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "alert-lisa": LocalJSX.AlertLisa & JSXBase.HTMLAttributes<HTMLAlertLisaElement>;
+            "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
             "mediagallery-lara": LocalJSX.MediagalleryLara & JSXBase.HTMLAttributes<HTMLMediagalleryLaraElement>;
             "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
+            "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
             "tap-lisa": LocalJSX.TapLisa & JSXBase.HTMLAttributes<HTMLTapLisaElement>;
             "taps-lisa": LocalJSX.TapsLisa & JSXBase.HTMLAttributes<HTMLTapsLisaElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
