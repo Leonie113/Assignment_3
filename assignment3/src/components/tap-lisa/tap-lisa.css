@@ -1,33 +1,11 @@
-p{
-    line-height: 1.5;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-family:sans-serif;
-}
-p.info{
-    background-color: #e6f7ff;
-    border: 1px solid #91d5ff;
-}
-
-p.succes{
-    border: 1px solid #f6ffed;
-    background-color: #b7eb8f;
-}
-
-p.error{
-    background-color: #fff1f0; 
-    border: 1px solid #ffa39e; 
-}
-
-p.acknowledged{
-    display: none;
-}
-
-span{
-    margin-left: 10px;
-    background-color: transparent;
+.tap-lisa{
+    padding: 12px 16px;
     cursor: pointer;
-    font-size: 10px;
     font-family: sans-serif;
-    opacity: 0.5;
+}
+.tap-lisa.active{
+    color: #1890ff;
+    font-weight: 500;
+    border-bottom: 2px solid #1890ff;
+    font-family: sans-serif;
 }

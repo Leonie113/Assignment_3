@@ -13,6 +13,10 @@ export namespace Components {
     }
     interface SearchLeonie {
     }
+    interface TapLisa {
+        "active": boolean;
+        "name": string;
+    }
     interface TextimgLeonie {
     }
 }
@@ -29,6 +33,12 @@ declare global {
         prototype: HTMLSearchLeonieElement;
         new (): HTMLSearchLeonieElement;
     };
+    interface HTMLTapLisaElement extends Components.TapLisa, HTMLStencilElement {
+    }
+    var HTMLTapLisaElement: {
+        prototype: HTMLTapLisaElement;
+        new (): HTMLTapLisaElement;
+    };
     interface HTMLTextimgLeonieElement extends Components.TextimgLeonie, HTMLStencilElement {
     }
     var HTMLTextimgLeonieElement: {
@@ -38,6 +48,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "alert-lisa": HTMLAlertLisaElement;
         "search-leonie": HTMLSearchLeonieElement;
+        "tap-lisa": HTMLTapLisaElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
@@ -52,6 +63,11 @@ declare namespace LocalJSX {
         "onEvClose"?: (event: CustomEvent<any>) => void;
         "onEvSearch"?: (event: CustomEvent<any>) => void;
     }
+    interface TapLisa {
+        "active"?: boolean;
+        "name"?: string;
+        "onTapActivate"?: (event: CustomEvent<TapActivateEvent>) => void;
+    }
     interface TextimgLeonie {
         "onEvHover"?: (event: CustomEvent<any>) => void;
         "onEvText"?: (event: CustomEvent<any>) => void;
@@ -59,6 +75,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "alert-lisa": AlertLisa;
         "search-leonie": SearchLeonie;
+        "tap-lisa": TapLisa;
         "textimg-leonie": TextimgLeonie;
     }
 }
@@ -68,6 +85,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "alert-lisa": LocalJSX.AlertLisa & JSXBase.HTMLAttributes<HTMLAlertLisaElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
+            "tap-lisa": LocalJSX.TapLisa & JSXBase.HTMLAttributes<HTMLTapLisaElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
     }

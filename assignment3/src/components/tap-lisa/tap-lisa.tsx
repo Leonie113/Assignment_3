@@ -1,16 +1,30 @@
-import { Component, h} from '@stencil/core';
+import { Component, h, Prop, Event, EventEmitter, Listen} from '@stencil/core';
 
-export interface AcknowledgeEvent{
-    when: Date;
+interface TapActivateEvent{
+    name: string;
 }
 
 @Component({
     tag: 'tap-lisa',
     styleUrl: 'tap-lisa.css',
-    scoped: true
+    shadow: true
 })
 export class TapLisa{
+@Prop() name: string;
+@Prop() active : boolean;
+@Event() tapActivate: EventEmitter<TapActivateEvent>;
+@Listen("click")
+handleClick(){
+    this.active = true;
+    this.tapActivate.emit({ name: this.name});
+}
+
  render(){
-     return();
+     return( <div class={this.getCSSClass()}> 
+     <slot/>
+     </div>
+
+     );
  }
+ getCSSClass = () => this.active ? "tap-lisa active" : "tap-lisa"; 
 }
