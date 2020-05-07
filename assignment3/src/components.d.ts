@@ -12,6 +12,13 @@ export namespace Components {
         "kind": "info" | "succes" | "error";
         "text": string;
     }
+    interface MediagalleryLara {
+        "image": Array<String>;
+        "imageNumber": number;
+    }
+    interface PopupLara {
+        "inputwert": string;
+    }
     interface SearchLeonie {
     }
     interface TapLisa {
@@ -30,6 +37,18 @@ declare global {
     var HTMLAlertLisaElement: {
         prototype: HTMLAlertLisaElement;
         new (): HTMLAlertLisaElement;
+    };
+    interface HTMLMediagalleryLaraElement extends Components.MediagalleryLara, HTMLStencilElement {
+    }
+    var HTMLMediagalleryLaraElement: {
+        prototype: HTMLMediagalleryLaraElement;
+        new (): HTMLMediagalleryLaraElement;
+    };
+    interface HTMLPopupLaraElement extends Components.PopupLara, HTMLStencilElement {
+    }
+    var HTMLPopupLaraElement: {
+        prototype: HTMLPopupLaraElement;
+        new (): HTMLPopupLaraElement;
     };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
@@ -57,6 +76,8 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "alert-lisa": HTMLAlertLisaElement;
+        "mediagallery-lara": HTMLMediagalleryLaraElement;
+        "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
         "tap-lisa": HTMLTapLisaElement;
         "taps-lisa": HTMLTapsLisaElement;
@@ -68,6 +89,13 @@ declare namespace LocalJSX {
         "kind"?: "info" | "succes" | "error";
         "onAcknowlegde"?: (event: CustomEvent<AcknowledgeEvent>) => void;
         "text"?: string;
+    }
+    interface MediagalleryLara {
+        "image"?: Array<String>;
+        "imageNumber"?: number;
+    }
+    interface PopupLara {
+        "inputwert"?: string;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
@@ -88,6 +116,8 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "alert-lisa": AlertLisa;
+        "mediagallery-lara": MediagalleryLara;
+        "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
         "tap-lisa": TapLisa;
         "taps-lisa": TapsLisa;
@@ -99,6 +129,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "alert-lisa": LocalJSX.AlertLisa & JSXBase.HTMLAttributes<HTMLAlertLisaElement>;
+            "mediagallery-lara": LocalJSX.MediagalleryLara & JSXBase.HTMLAttributes<HTMLMediagalleryLaraElement>;
+            "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "tap-lisa": LocalJSX.TapLisa & JSXBase.HTMLAttributes<HTMLTapLisaElement>;
             "taps-lisa": LocalJSX.TapsLisa & JSXBase.HTMLAttributes<HTMLTapsLisaElement>;
