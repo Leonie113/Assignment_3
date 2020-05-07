@@ -12,6 +12,15 @@
 <body>
 
   <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <alert-lisa kind="info" text="This is an important alert!"></alert-lisa>
+  <alert-lisa kind="succes" text="Well done!"></alert-lisa>
+  <alert-lisa kind="error" text="Something went wrong!"></alert-lisa>
+  <script>
+function handleAcknowledge(e){
+  console.log(e.target.text, e.detail.when);
+}
+document.addEventListener("acknowledge", handleAcknowledge)
+  </script>
   <search-leonie></search-leonie>
   <textimg-leonie></textSlide-leonie>
 </body>

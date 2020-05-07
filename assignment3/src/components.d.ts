@@ -5,8 +5,11 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { AcknowledgeEvent, } from "./components/alert-lisa/alert-lisa";
 export namespace Components {
-    interface NavigationLisa {
+    interface AlertLisa {
+        "kind": "info" | "succes" | "error";
+        "text": string;
     }
     interface SearchLeonie {
     }
@@ -14,11 +17,11 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLNavigationLisaElement extends Components.NavigationLisa, HTMLStencilElement {
+    interface HTMLAlertLisaElement extends Components.AlertLisa, HTMLStencilElement {
     }
-    var HTMLNavigationLisaElement: {
-        prototype: HTMLNavigationLisaElement;
-        new (): HTMLNavigationLisaElement;
+    var HTMLAlertLisaElement: {
+        prototype: HTMLAlertLisaElement;
+        new (): HTMLAlertLisaElement;
     };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
@@ -33,13 +36,16 @@ declare global {
         new (): HTMLTextimgLeonieElement;
     };
     interface HTMLElementTagNameMap {
-        "navigation-lisa": HTMLNavigationLisaElement;
+        "alert-lisa": HTMLAlertLisaElement;
         "search-leonie": HTMLSearchLeonieElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
 declare namespace LocalJSX {
-    interface NavigationLisa {
+    interface AlertLisa {
+        "kind"?: "info" | "succes" | "error";
+        "onAcknowlegde"?: (event: CustomEvent<AcknowledgeEvent>) => void;
+        "text"?: string;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
@@ -51,7 +57,7 @@ declare namespace LocalJSX {
         "onEvText"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
-        "navigation-lisa": NavigationLisa;
+        "alert-lisa": AlertLisa;
         "search-leonie": SearchLeonie;
         "textimg-leonie": TextimgLeonie;
     }
@@ -60,7 +66,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "navigation-lisa": LocalJSX.NavigationLisa & JSXBase.HTMLAttributes<HTMLNavigationLisaElement>;
+            "alert-lisa": LocalJSX.AlertLisa & JSXBase.HTMLAttributes<HTMLAlertLisaElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
