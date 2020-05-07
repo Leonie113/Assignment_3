@@ -9,7 +9,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class PopupLara {
 
  
-  @Prop () inputwert: string;
+  @Prop () inputValue: string;
 
 
   divElement!: HTMLDivElement;
@@ -21,11 +21,11 @@ export class PopupLara {
 
   inputChanged(event){
     console.log('input changed: ', event.target.value);
-    this.inputwert = event.target.value;
+    this.inputValue = event.target.value;
   }
 
   handleClickAnmelden(){
-    if (this.inputwert === undefined || this.inputwert === ""){
+    if (this.inputValue === undefined || this.inputValue === ""){
       this.pElement.classList.add("errorp");
       this.pElement.innerHTML = "Du hast vergessen deine Email einzugeben";
     } else{
