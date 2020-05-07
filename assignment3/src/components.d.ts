@@ -5,12 +5,27 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { TabActivateEvent, } from "./components/tap-lisa/tap-lisa";
 export namespace Components {
     interface LoginJessi {
+    }
+    interface MediagalleryLara {
+        "image": Array<String>;
+        "imageNumber": number;
+    }
+    interface PopupLara {
+        "inputwert": string;
     }
     interface SearchLeonie {
     }
     interface SternBewertung {
+    }
+    interface TapLisa {
+        "active": boolean;
+        "name": string;
+    }
+    interface TapsLisa {
+        "activeTab": string;
     }
     interface TextimgLeonie {
     }
@@ -21,6 +36,18 @@ declare global {
     var HTMLLoginJessiElement: {
         prototype: HTMLLoginJessiElement;
         new (): HTMLLoginJessiElement;
+    };
+    interface HTMLMediagalleryLaraElement extends Components.MediagalleryLara, HTMLStencilElement {
+    }
+    var HTMLMediagalleryLaraElement: {
+        prototype: HTMLMediagalleryLaraElement;
+        new (): HTMLMediagalleryLaraElement;
+    };
+    interface HTMLPopupLaraElement extends Components.PopupLara, HTMLStencilElement {
+    }
+    var HTMLPopupLaraElement: {
+        prototype: HTMLPopupLaraElement;
+        new (): HTMLPopupLaraElement;
     };
     interface HTMLSearchLeonieElement extends Components.SearchLeonie, HTMLStencilElement {
     }
@@ -34,6 +61,18 @@ declare global {
         prototype: HTMLSternBewertungElement;
         new (): HTMLSternBewertungElement;
     };
+    interface HTMLTapLisaElement extends Components.TapLisa, HTMLStencilElement {
+    }
+    var HTMLTapLisaElement: {
+        prototype: HTMLTapLisaElement;
+        new (): HTMLTapLisaElement;
+    };
+    interface HTMLTapsLisaElement extends Components.TapsLisa, HTMLStencilElement {
+    }
+    var HTMLTapsLisaElement: {
+        prototype: HTMLTapsLisaElement;
+        new (): HTMLTapsLisaElement;
+    };
     interface HTMLTextimgLeonieElement extends Components.TextimgLeonie, HTMLStencilElement {
     }
     var HTMLTextimgLeonieElement: {
@@ -42,14 +81,25 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "login-jessi": HTMLLoginJessiElement;
+        "mediagallery-lara": HTMLMediagalleryLaraElement;
+        "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
         "stern-bewertung": HTMLSternBewertungElement;
+        "tap-lisa": HTMLTapLisaElement;
+        "taps-lisa": HTMLTapsLisaElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
 declare namespace LocalJSX {
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
+    }
+    interface MediagalleryLara {
+        "image"?: Array<String>;
+        "imageNumber"?: number;
+    }
+    interface PopupLara {
+        "inputwert"?: string;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;
@@ -59,14 +109,26 @@ declare namespace LocalJSX {
     interface SternBewertung {
         "onSternWertung"?: (event: CustomEvent<any>) => void;
     }
+    interface TapLisa {
+        "active"?: boolean;
+        "name"?: string;
+        "onTabActivate"?: (event: CustomEvent<TabActivateEvent>) => void;
+    }
+    interface TapsLisa {
+        "activeTab"?: string;
+    }
     interface TextimgLeonie {
         "onEvHover"?: (event: CustomEvent<any>) => void;
         "onEvText"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
         "login-jessi": LoginJessi;
+        "mediagallery-lara": MediagalleryLara;
+        "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
         "stern-bewertung": SternBewertung;
+        "tap-lisa": TapLisa;
+        "taps-lisa": TapsLisa;
         "textimg-leonie": TextimgLeonie;
     }
 }
@@ -75,8 +137,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
+            "mediagallery-lara": LocalJSX.MediagalleryLara & JSXBase.HTMLAttributes<HTMLMediagalleryLaraElement>;
+            "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
+            "tap-lisa": LocalJSX.TapLisa & JSXBase.HTMLAttributes<HTMLTapLisaElement>;
+            "taps-lisa": LocalJSX.TapsLisa & JSXBase.HTMLAttributes<HTMLTapsLisaElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
     }

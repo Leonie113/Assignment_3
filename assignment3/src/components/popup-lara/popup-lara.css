@@ -1,0 +1,92 @@
+
+:host {
+  display: block;
+}
+
+div {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:	rgb(136,136,136);
+  z-index:100;
+	width: 415px;
+	height: auto;
+  margin-left: 35%;
+	background-color: white;
+	box-shadow: 10px 10px 44px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  position: fixed;
+  text-align: center;
+}
+
+
+
+.buttonx{
+  z-index:110;
+  float: right;
+  font-size: 50px;
+  color: rgb(255, 248, 248);
+  position: absolute;
+  margin-top: -8px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  right: 5px;
+}
+
+span{
+ width: 80%;
+}
+
+h1{
+  font-weight: lighter;
+
+}
+p {
+  width: 65%;
+  margin-top: -2%;
+  font-size: 18px;
+  display: inline-block
+}
+
+input{
+  border: 2px solid rgb(240, 240, 240);
+  color:	rgb(136,136,136);
+  padding-left: 5px;
+  margin-top: 10px;
+  height: 20px;
+  width: 65%;
+  font-size: 12px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.button-registieren {
+  margin-top: 30px;
+  float: none;
+  margin: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 40%;
+  text-align: center;
+  color: rgb(127, 200, 196);
+  font-size: 20px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  font-weight: bold;
+}
+
+
+div img{
+  z-index: 101;
+  width: 415px;
+  position: relative;
+}
+
+.errorp{
+  color: rgb(127, 200, 196);
+  font-size: 12px;
+}

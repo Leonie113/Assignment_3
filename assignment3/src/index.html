@@ -12,7 +12,27 @@
 <body>
   <stern-bewertung></stern-bewertung>
   <login-jessi></login-jessi>
+  <popup-lara>Abonniere jetzt den Newsletter und erhalte tolle Rabattcodes!</popup-lara>
+  <mediagallery-lara></mediagallery-lara>
   <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <alert-lisa kind="info" text="This is an important alert!"></alert-lisa>
+  <alert-lisa kind="succes" text="Well done!"></alert-lisa>
+  <alert-lisa kind="error" text="Something went wrong!"></alert-lisa>
+  <taps-lisa active-tab="Tap2">
+  <tap-lisa name="Tap1">Videos</tap-lisa>
+  <tap-lisa name="Tap2"><b>Bilder</b></tap-lisa>
+  </taps-lisa>
+  <script>
+function handleAcknowledge(e){
+  console.log(e.target.text, e.detail.when);
+}
+document.addEventListener("acknowledge", handleAcknowledge)
+
+function handleTabActivate(e){
+  console.log(e.detail.name);
+}
+document.addEventListener("tabActivate", handleTabActivate)
+  </script>
   <search-leonie></search-leonie>
   <textimg-leonie></textSlide-leonie>
   
