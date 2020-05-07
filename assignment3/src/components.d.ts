@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { AcknowledgeEvent, } from "./components/alert-lisa/alert-lisa";
+import { TabActivateEvent, } from "./components/tap-lisa/tap-lisa";
 export namespace Components {
     interface AlertLisa {
         "kind": "info" | "succes" | "error";
@@ -16,6 +17,9 @@ export namespace Components {
     interface TapLisa {
         "active": boolean;
         "name": string;
+    }
+    interface TapsLisa {
+        "activeTab": string;
     }
     interface TextimgLeonie {
     }
@@ -39,6 +43,12 @@ declare global {
         prototype: HTMLTapLisaElement;
         new (): HTMLTapLisaElement;
     };
+    interface HTMLTapsLisaElement extends Components.TapsLisa, HTMLStencilElement {
+    }
+    var HTMLTapsLisaElement: {
+        prototype: HTMLTapsLisaElement;
+        new (): HTMLTapsLisaElement;
+    };
     interface HTMLTextimgLeonieElement extends Components.TextimgLeonie, HTMLStencilElement {
     }
     var HTMLTextimgLeonieElement: {
@@ -49,6 +59,7 @@ declare global {
         "alert-lisa": HTMLAlertLisaElement;
         "search-leonie": HTMLSearchLeonieElement;
         "tap-lisa": HTMLTapLisaElement;
+        "taps-lisa": HTMLTapsLisaElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
@@ -66,7 +77,10 @@ declare namespace LocalJSX {
     interface TapLisa {
         "active"?: boolean;
         "name"?: string;
-        "onTapActivate"?: (event: CustomEvent<TapActivateEvent>) => void;
+        "onTabActivate"?: (event: CustomEvent<TabActivateEvent>) => void;
+    }
+    interface TapsLisa {
+        "activeTab"?: string;
     }
     interface TextimgLeonie {
         "onEvHover"?: (event: CustomEvent<any>) => void;
@@ -76,6 +90,7 @@ declare namespace LocalJSX {
         "alert-lisa": AlertLisa;
         "search-leonie": SearchLeonie;
         "tap-lisa": TapLisa;
+        "taps-lisa": TapsLisa;
         "textimg-leonie": TextimgLeonie;
     }
 }
@@ -86,6 +101,7 @@ declare module "@stencil/core" {
             "alert-lisa": LocalJSX.AlertLisa & JSXBase.HTMLAttributes<HTMLAlertLisaElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "tap-lisa": LocalJSX.TapLisa & JSXBase.HTMLAttributes<HTMLTapLisaElement>;
+            "taps-lisa": LocalJSX.TapsLisa & JSXBase.HTMLAttributes<HTMLTapsLisaElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
     }

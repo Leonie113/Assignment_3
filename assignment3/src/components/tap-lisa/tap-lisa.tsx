@@ -1,6 +1,6 @@
 import { Component, h, Prop, Event, EventEmitter, Listen} from '@stencil/core';
 
-interface TapActivateEvent{
+export interface TabActivateEvent{
     name: string;
 }
 
@@ -9,14 +9,14 @@ interface TapActivateEvent{
     styleUrl: 'tap-lisa.css',
     shadow: true
 })
-export class TapLisa{
+export class TabLisa{
 @Prop() name: string;
 @Prop() active : boolean;
-@Event() tapActivate: EventEmitter<TapActivateEvent>;
+@Event() tabActivate: EventEmitter<TabActivateEvent>;
 @Listen("click")
 handleClick(){
     this.active = true;
-    this.tapActivate.emit({ name: this.name});
+    this.tabActivate.emit({ name: this.name});
 }
 
  render(){
