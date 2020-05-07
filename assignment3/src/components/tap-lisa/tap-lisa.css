@@ -1,11 +1,18 @@
 .tap-lisa{
+    margin-top: -10px;
     padding: 12px 16px;
     cursor: pointer;
     font-family: sans-serif;
+    background-color: thistle;
+    position: fixed;
+    top:0;
 }
 .tap-lisa.active{
     color: #1890ff;
     font-weight: 500;
     border-bottom: 2px solid #1890ff;
     font-family: sans-serif;
+    background-color: thistle;
+    position: fixed;
+    top: 0;
 }
