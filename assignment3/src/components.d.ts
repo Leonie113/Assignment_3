@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { TabActivateEvent, } from "./components/tap-lisa/tap-lisa";
 export namespace Components {
     interface LoginJessi {
     }
@@ -18,6 +19,13 @@ export namespace Components {
     interface SearchLeonie {
     }
     interface SternBewertung {
+    }
+    interface TapLisa {
+        "active": boolean;
+        "name": string;
+    }
+    interface TapsLisa {
+        "activeTab": string;
     }
     interface TextimgLeonie {
     }
@@ -53,6 +61,18 @@ declare global {
         prototype: HTMLSternBewertungElement;
         new (): HTMLSternBewertungElement;
     };
+    interface HTMLTapLisaElement extends Components.TapLisa, HTMLStencilElement {
+    }
+    var HTMLTapLisaElement: {
+        prototype: HTMLTapLisaElement;
+        new (): HTMLTapLisaElement;
+    };
+    interface HTMLTapsLisaElement extends Components.TapsLisa, HTMLStencilElement {
+    }
+    var HTMLTapsLisaElement: {
+        prototype: HTMLTapsLisaElement;
+        new (): HTMLTapsLisaElement;
+    };
     interface HTMLTextimgLeonieElement extends Components.TextimgLeonie, HTMLStencilElement {
     }
     var HTMLTextimgLeonieElement: {
@@ -65,6 +85,8 @@ declare global {
         "popup-lara": HTMLPopupLaraElement;
         "search-leonie": HTMLSearchLeonieElement;
         "stern-bewertung": HTMLSternBewertungElement;
+        "tap-lisa": HTMLTapLisaElement;
+        "taps-lisa": HTMLTapsLisaElement;
         "textimg-leonie": HTMLTextimgLeonieElement;
     }
 }
@@ -87,6 +109,14 @@ declare namespace LocalJSX {
     interface SternBewertung {
         "onSternWertung"?: (event: CustomEvent<any>) => void;
     }
+    interface TapLisa {
+        "active"?: boolean;
+        "name"?: string;
+        "onTabActivate"?: (event: CustomEvent<TabActivateEvent>) => void;
+    }
+    interface TapsLisa {
+        "activeTab"?: string;
+    }
     interface TextimgLeonie {
         "onEvHover"?: (event: CustomEvent<any>) => void;
         "onEvText"?: (event: CustomEvent<any>) => void;
@@ -97,6 +127,8 @@ declare namespace LocalJSX {
         "popup-lara": PopupLara;
         "search-leonie": SearchLeonie;
         "stern-bewertung": SternBewertung;
+        "tap-lisa": TapLisa;
+        "taps-lisa": TapsLisa;
         "textimg-leonie": TextimgLeonie;
     }
 }
@@ -109,6 +141,8 @@ declare module "@stencil/core" {
             "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
             "search-leonie": LocalJSX.SearchLeonie & JSXBase.HTMLAttributes<HTMLSearchLeonieElement>;
             "stern-bewertung": LocalJSX.SternBewertung & JSXBase.HTMLAttributes<HTMLSternBewertungElement>;
+            "tap-lisa": LocalJSX.TapLisa & JSXBase.HTMLAttributes<HTMLTapLisaElement>;
+            "taps-lisa": LocalJSX.TapsLisa & JSXBase.HTMLAttributes<HTMLTapsLisaElement>;
             "textimg-leonie": LocalJSX.TextimgLeonie & JSXBase.HTMLAttributes<HTMLTextimgLeonieElement>;
         }
     }
