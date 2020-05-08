@@ -1,18 +1,31 @@
+/*.tap-lisa{
+    padding: 10px 16px;
+    cursor: pointer;
+    font-family: sans-serif;
+    background-color: #Dda0dd;
+    position: absolute;
+    top:0;
+    left:5%;
+}
+.tap-lisa.active{
+    color: white;
+    font-weight: 500;
+    border-bottom: 2px solid white;
+    font-family: sans-serif;
+    background-color:#Dda0dd;
+    position: absolute;
+    left: 10%;
+}*/
 .tap-lisa{
-    margin-top: -10px;
     padding: 12px 16px;
     cursor: pointer;
     font-family: sans-serif;
-    background-color: thistle;
-    position: fixed;
-    top:0;
+    color: #D8BFD8;
+    margin-top: -800px;
 }
 .tap-lisa.active{
-    color: #1890ff;
+    color: #Dda0dd;
     font-weight: 500;
-    border-bottom: 2px solid #1890ff;
+    border-bottom: 2px solid  #Dda0dd;
     font-family: sans-serif;
-    background-color: thistle;
-    position: fixed;
-    top: 0;
 }

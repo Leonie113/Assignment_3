@@ -43,8 +43,11 @@ else{
      return( 
     <div class="my-tabs-container">
         <slot/>
+      <div class="header">
+        <img id="logo" src="/assets/symbol.png"></img>
+        </div>
     </div>
-     );
+    );
  }
  getHeadings = () => [].slice.call(this.element.querySelector(".my-tabs-container").children)
  .filter (child => child.tagName.toLowerCase() === "tap-lisa");

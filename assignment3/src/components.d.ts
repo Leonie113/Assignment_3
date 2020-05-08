@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { TabActivateEvent, } from "./components/tap-lisa/tap-lisa";
 export namespace Components {
+    interface FooterLisa {
+    }
     interface LoginJessi {
     }
     interface MediagalleryLara {
@@ -31,6 +33,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLFooterLisaElement extends Components.FooterLisa, HTMLStencilElement {
+    }
+    var HTMLFooterLisaElement: {
+        prototype: HTMLFooterLisaElement;
+        new (): HTMLFooterLisaElement;
+    };
     interface HTMLLoginJessiElement extends Components.LoginJessi, HTMLStencilElement {
     }
     var HTMLLoginJessiElement: {
@@ -80,6 +88,7 @@ declare global {
         new (): HTMLTextimgLeonieElement;
     };
     interface HTMLElementTagNameMap {
+        "footer-lisa": HTMLFooterLisaElement;
         "login-jessi": HTMLLoginJessiElement;
         "mediagallery-lara": HTMLMediagalleryLaraElement;
         "popup-lara": HTMLPopupLaraElement;
@@ -91,6 +100,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface FooterLisa {
+        "onLink"?: (event: CustomEvent<any>) => void;
+    }
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;
     }
@@ -122,6 +134,7 @@ declare namespace LocalJSX {
         "onEvText"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
+        "footer-lisa": FooterLisa;
         "login-jessi": LoginJessi;
         "mediagallery-lara": MediagalleryLara;
         "popup-lara": PopupLara;
@@ -136,6 +149,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "footer-lisa": LocalJSX.FooterLisa & JSXBase.HTMLAttributes<HTMLFooterLisaElement>;
             "login-jessi": LocalJSX.LoginJessi & JSXBase.HTMLAttributes<HTMLLoginJessiElement>;
             "mediagallery-lara": LocalJSX.MediagalleryLara & JSXBase.HTMLAttributes<HTMLMediagalleryLaraElement>;
             "popup-lara": LocalJSX.PopupLara & JSXBase.HTMLAttributes<HTMLPopupLaraElement>;
