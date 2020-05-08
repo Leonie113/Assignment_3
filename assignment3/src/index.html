@@ -20,12 +20,7 @@
   <tap-lisa name="Tap2"><b>Blog</b></tap-lisa>
   </taps-lisa>
   <script>
-function handleAcknowledge(e){
-  console.log(e.target.text, e.detail.when);
-}
-document.addEventListener("acknowledge", handleAcknowledge)
-
-function handleTabActivate(e){
+  function handleTabActivate(e){
   console.log(e.detail.name);
 }
 document.addEventListener("tabActivate", handleTabActivate)
@@ -33,7 +28,6 @@ document.addEventListener("tabActivate", handleTabActivate)
   <search-leonie></search-leonie>
   <textimg-leonie></textSlide-leonie>
   <footer-lisa></footer-lisa>
-  
 
 </body>
 </html>

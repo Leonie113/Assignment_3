@@ -101,7 +101,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface FooterLisa {
-        "onLink"?: (event: CustomEvent<any>) => void;
     }
     interface LoginJessi {
         "onLoginErfolgt"?: (event: CustomEvent<any>) => void;

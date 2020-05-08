@@ -1,4 +1,4 @@
-import { Component, h, Event, EventEmitter } from '@stencil/core';
+import { Component, h, } from '@stencil/core';
 
 @Component({
     tag: 'footer-lisa',
@@ -6,12 +6,13 @@ import { Component, h, Event, EventEmitter } from '@stencil/core';
 })
 
 export class FooterLisa {
-    @Event() link: EventEmitter;
+    pElement !: HTMLParagraphElement;
 
+ handleAutoren(){
+this.pElement.innerHTML = "Lara Neumaier, Leonie Müller, Jessica Noe, Lisa Albers";
+ }
     
-
-
-    render() {
+render() {
         return <div class="footer">
             <ul id="footer-liste">
                 <li><a href="https://de.wikipedia.org/wiki/Datenschutz">AGB</a></li>
@@ -19,6 +20,8 @@ export class FooterLisa {
                 <li><a href="https://www.instagram.com/?hl=de"><img src="/assets/icon.png"></img></a></li>
                 <li><a href="https://www.youtube.com/"><img src="/assets/youtube.png"></img></a></li>
             </ul>
+            <p ref={(el)=> this.pElement = el as HTMLParagraphElement}></p>
+            <button class="button-autor" onClick={() => this.handleAutoren()}>Made by</button>
         </div>
     }
 }
