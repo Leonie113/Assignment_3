@@ -76,3 +76,30 @@ footer-lisa{
         font-size: 15px;
     }
 }
+.footer p{
+font-family: sans-serif;
+color: white;
+font-size: 12pt;
+position: absolute;
+    top:25%;
+    left:30%;
+}
+
+.footer button{
+    background-color: #FFF0F5;
+    font-family: sans-serif;
+    font-size: 12pt;
+    color: #D8BFD8;
+    border: #D8BFD8;
+    width: 110px;
+    height: auto;
+    margin-bottom: 20px;
+    padding-top: -10px;
+    position: absolute;
+    top:45%;
+    left:20%;
+}
+.footer button:hover{
+    color:white;
+    background-color: #C71585;
+}
