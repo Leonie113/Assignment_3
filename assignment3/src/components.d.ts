@@ -16,7 +16,7 @@ export namespace Components {
         "imageNumber": number;
     }
     interface PopupLara {
-        "inputwert": string;
+        "inputValue": string;
     }
     interface SearchLeonie {
     }
@@ -110,7 +110,7 @@ declare namespace LocalJSX {
         "imageNumber"?: number;
     }
     interface PopupLara {
-        "inputwert"?: string;
+        "inputValue"?: string;
     }
     interface SearchLeonie {
         "onEvClick"?: (event: CustomEvent<any>) => void;

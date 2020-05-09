@@ -8,12 +8,12 @@ import {TabActivateEvent} from "./tap-lisa";
     shadow: true
 })
 export class TapsLisa{
-@Element() element;
 @Prop ({mutable:true}) activeTab: string;
+
 @Watch("activeTab")
 handleActiveTabChange (newValue: string){
 const headings = this.getHeadings();
-headings.array.forEach(heading => {
+headings.forEach(heading => {
 if (heading.name === newValue){
     heading.active = true;
 }    
@@ -22,9 +22,10 @@ else{
 }
 });
 }
+@Element() element;
 
     @Listen("tabActivate")
-    handleTabActivate(e: CustomEvent <TabActivateEvent>){
+    handleTabActivate(e: CustomEvent<TabActivateEvent>) {
         this.activeTab = e.detail.name;
 }
     componentDidLoad(){

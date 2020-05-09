@@ -20,7 +20,8 @@ handleClick(){
 }
 
  render(){
-     return( <div class={this.getCSSClass()}> 
+     return( 
+     <div class={this.getCSSClass()}> 
      <slot/>
      </div>
 
