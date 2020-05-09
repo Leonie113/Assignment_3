@@ -5,6 +5,7 @@ footer-lisa{
 @media screen and (max-width: 750px) {
     .footer-lisa{
         width: 100%;
+        top:80%;
     }
 }
 @media screen and (max-width: 2000px) {
@@ -22,6 +23,7 @@ footer-lisa{
     top: 50%;
     position: absolute;
     top:210%;
+    bottom: 0%;
 }
 .textbox{
     padding-top: 10px;
